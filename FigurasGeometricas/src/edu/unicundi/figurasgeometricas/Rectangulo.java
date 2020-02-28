@@ -8,18 +8,19 @@ package edu.unicundi.figurasgeometricas;
  */
 public class Rectangulo extends FigurasGeometricas {
     
-    /*public Rectangulo(int coordenadas[]) {
+    /**
+     * Variable "lado2" para almacenar uno de los lados de la figura geométrica.
+     */
+    private double lado2;
+    private int[] coordenadas = new int[8];
+    /*
+    public Rectangulo(int[] coordenadas){
         if (validacionRectangulo(coordenadas)) {
             Pintar a = new Pintar(coordenadas);
         }else{
             System.out.println("Las coordenadas no son correctas para un cuadrado.");
         }
     }*/
-    
-    /**
-     * Variable "lado2" para almacenar uno de los lados de la figura geométrica.
-     */
-    private double lado2;
     
     /**
      * Constructor para inicializar los atributos de la clase.
@@ -30,6 +31,7 @@ public class Rectangulo extends FigurasGeometricas {
     public Rectangulo(double lado1, String color, double lado2){
         super(lado1, color);
         this.lado2 = lado2;
+        Pintar a = new Pintar(coordenadas);
     }
     
     /**
