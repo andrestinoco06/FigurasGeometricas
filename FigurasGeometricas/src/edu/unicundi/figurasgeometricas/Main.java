@@ -46,7 +46,7 @@ public class Main {
     }
 
     /**
-     * Metodo para ingresar las coordenadas al array.
+     * Metodo para ingresar las coordenadas al array y posteriormente invocar metodos.
      * @param tipo
      * @return coordenadas
      */
@@ -83,23 +83,48 @@ public class Main {
         }
         
         if (tipo == 1){
-            int x1 = coordenadas[1];
+            int x1 = coordenadas[0];
             int x2 = coordenadas[2];
-            int y1 = coordenadas[3];
-            int y2 = coordenadas[4];
-            double tam = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
-            FigurasGeometricas f = new FigurasGeometricas(tam, "Blanco");
+            int y1 = coordenadas[1];
+            int y2 = coordenadas[3];
+            double lad1 = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
+            FigurasGeometricas f = new FigurasGeometricas(lad1, "Blanco");
             f.hallarArea();
             f.hallarPerimetro();
             f.imprimir();
         }
         else if (tipo == 2){
-            
+            int x1 = coordenadas[0];
+            int x2 = coordenadas[2];
+            int x3 = coordenadas[4];
+            int y1 = coordenadas[1];
+            int y2 = coordenadas[3];
+            int y3 = coordenadas[5];
+            double lad1 = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
+            double lad2 = Math.sqrt(Math.pow(x3-x2,2)+Math.pow(y3-y2, 2));
+            Rectangulo r = new Rectangulo(lad1, "Blanco", lad2);
+            r.hallarArea();
+            r.hallarPerimetro();
+            r.imprimir();
         }
         else if (tipo == 3){
-            
+            int x1 = coordenadas[0];
+            int x2 = coordenadas[2];
+            int x3 = coordenadas[4];
+            int x4 = coordenadas[6];
+            int y1 = coordenadas[1];
+            int y2 = coordenadas[3];
+            int y3 = coordenadas[5];
+            int y4 = coordenadas[7];
+            double lad1 = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
+            double lad2 = Math.sqrt(Math.pow(x3-x2,2)+Math.pow(y3-y2, 2));
+            double lad3 = Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3, 2));
+            Triangulo t = new Triangulo (lad1, "Blanco", lad2, lad3);
+            t.hallarArea();
+            t.hallarPerimetro();
+            t.imprimir();
         }
-        
+
         return coordenadas;
     }
 }

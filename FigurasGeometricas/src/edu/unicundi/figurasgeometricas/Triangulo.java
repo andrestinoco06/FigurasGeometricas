@@ -25,10 +25,9 @@ public class Triangulo extends Rectangulo{
      * @param lado3
      * @param tipo 
      */
-    public Triangulo(double lado1, String color, double lado2, double lado3, String tipo){
+    public Triangulo(double lado1, String color, double lado2, double lado3){
         super(lado1, color, lado2);
         this.lado3 = lado3;
-        this.tipo = tipo;
     }
     
     /**
@@ -50,6 +49,14 @@ public class Triangulo extends Rectangulo{
         double per = (getPerimetro()/2);
         setArea((double) Math.sqrt(per*(per-getLado1())*(per-getLado2())*(per-lado3)));
         return getArea();
+    }
+    
+    /**
+     * Método para imprimir el area, perimetro y tipo de triangulo.
+     */
+    @Override
+    public void imprimir(){
+        System.out.println("Area: " + hallarArea() + " - Perimetro: " + hallarPerimetro() + " Tipo: " + tipoTriangulo());
     }
     
     /**
