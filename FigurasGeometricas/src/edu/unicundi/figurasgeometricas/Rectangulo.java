@@ -8,6 +8,14 @@ package edu.unicundi.figurasgeometricas;
  */
 public class Rectangulo extends FigurasGeometricas {
     
+    /*public Rectangulo(int coordenadas[]) {
+        if (validacionRectangulo(coordenadas)) {
+            Pintar a = new Pintar(coordenadas);
+        }else{
+            System.out.println("Las coordenadas no son correctas para un cuadrado.");
+        }
+    }*/
+    
     /**
      * Variable "lado2" para almacenar uno de los lados de la figura geométrica.
      */

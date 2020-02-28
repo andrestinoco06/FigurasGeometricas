@@ -3,13 +3,17 @@ package edu.unicundi.figurasgeometricas;
 import java.util.Scanner;
 
 /**
- *
+ *  Clase Main para ejecutar el programa.
  * @author Camilo Tinoco
  * @author Johan Zambrano
  * @version 1.0.0
  */
 public class Main {
     
+    /**
+     * Metodo Main para ejecutar el programa.
+     * @param args 
+     */
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         int opcion;
@@ -41,6 +45,11 @@ public class Main {
 
     }
 
+    /**
+     * Metodo para ingresar las coordenadas al array.
+     * @param tipo
+     * @return coordenadas
+     */
     static int[] coordenadas(int tipo) {
         //Guarda las coordenadas, X y Y, son 4 coordenadas, 8 números en total
         int[] coordenadas = new int[8];

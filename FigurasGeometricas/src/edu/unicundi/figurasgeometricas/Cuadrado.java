@@ -1,15 +1,17 @@
 package edu.unicundi.figurasgeometricas;
 
 /**
- *
+ * Clase para almacenar los atributos y métodos del cuadrado.
  * @author Camilo Tinoco
  * @author Johan Zambrano
  * @version 1.0.0
  */
-
-
 public class Cuadrado {
     
+    /**
+     * Método para pintar el cuadrado si la validacion retorna true.
+     * @param coordenadas 
+     */
     public Cuadrado(int coordenadas[]) {
         if (validacionCuadrado(coordenadas)) {
             Pintar a = new Pintar(coordenadas);
@@ -18,6 +20,11 @@ public class Cuadrado {
         }
     }
 
+    /**
+     * Método para validar las posiciones del rectangulo.
+     * @param coordenadas
+     * @return validacion
+     */
     static boolean validacionCuadrado(int[] coordenadas) {
         boolean validacion = false;
         //valida que las coordenas sean correctas para un cuadrado
@@ -38,20 +45,4 @@ public class Cuadrado {
         }
         return validacion;
     }
-    
-    //ÉSTA va en la clase de la rectangulo -- Bueno jaja ! 
-    /*static boolean validacionRectangulo(int[] coordenadas) {
-        boolean validacion = false;
-        //valida que las coordenas sean correctas para un rectangulo
-        if (coordenadas[1] == coordenadas[3]) {
-            if (coordenadas[2] == coordenadas[4]) {
-                if (coordenadas[5] == coordenadas[7]) {
-                    if (coordenadas[6] == coordenadas[0]) {
-                        validacion = true;
-                    }
-                }
-            }
-        }
-        return validacion;
-    }*/
 }
