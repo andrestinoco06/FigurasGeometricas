@@ -1,20 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.unicundi.figurasgeometricas;
 
 import javax.swing.BoxLayout;
 
 /**
- *
+ * Clase para crear el JFrame y el JPanel.
  * @author Camilo Tinoco
  * @author Johan Zambrano
+ * @version 1.0.0
  */
 public class Pintar extends javax.swing.JFrame{
     
-    //Este JFRAME, para pintar siempre se llama a este, y este llama al JPanel
+    /**
+     * Este JFrame, para pintar siempre se llama a este, y este llama al JPanel.
+     * @param coordenadas 
+     */
     public Pintar(int[] coordenadas){
         super("Pintar");
         this.setSize(415,440); //tamaño

@@ -1,16 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.unicundi.figurasgeometricas;
 
 /**
  *
  * @author Camilo Tinoco
  * @author Johan Zambrano
+ * @version 1.0.0
  */
+
+
 public class Cuadrado {
+    
     public Cuadrado(int coordenadas[]) {
         if (validacionCuadrado(coordenadas)) {
             Pintar a = new Pintar(coordenadas);
@@ -40,10 +39,10 @@ public class Cuadrado {
         return validacion;
     }
     
-    //ÉSTA va en la clase de la rectangulo
-    static boolean validacionRectangulo(int[] coordenadas) {
+    //ÉSTA va en la clase de la rectangulo -- Bueno jaja ! 
+    /*static boolean validacionRectangulo(int[] coordenadas) {
         boolean validacion = false;
-        //valida que las coordenas sean correctas para un cuadrado
+        //valida que las coordenas sean correctas para un rectangulo
         if (coordenadas[1] == coordenadas[3]) {
             if (coordenadas[2] == coordenadas[4]) {
                 if (coordenadas[5] == coordenadas[7]) {
@@ -54,5 +53,5 @@ public class Cuadrado {
             }
         }
         return validacion;
-    }
+    }*/
 }

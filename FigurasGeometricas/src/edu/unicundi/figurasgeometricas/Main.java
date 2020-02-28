@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.unicundi.figurasgeometricas;
 
 import java.util.Scanner;
@@ -11,8 +6,10 @@ import java.util.Scanner;
  *
  * @author Camilo Tinoco
  * @author Johan Zambrano
+ * @version 1.0.0
  */
 public class Main {
+    
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         int opcion;
@@ -74,7 +71,6 @@ public class Main {
             } else {
                 System.out.println("Coordenada " + (i) + " en Y => " + coordenadas[i]);
             }
-
         }
         return coordenadas;
     }
