@@ -72,6 +72,25 @@ public class Main {
                 System.out.println("Coordenada " + (i) + " en Y => " + coordenadas[i]);
             }
         }
+        
+        if (tipo == 1){
+            int x1 = coordenadas[1];
+            int x2 = coordenadas[2];
+            int y1 = coordenadas[3];
+            int y2 = coordenadas[4];
+            double tam = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
+            FigurasGeometricas f = new FigurasGeometricas(tam, "Blanco");
+            f.hallarArea();
+            f.hallarPerimetro();
+            f.imprimir();
+        }
+        else if (tipo == 2){
+            
+        }
+        else if (tipo == 3){
+            
+        }
+        
         return coordenadas;
     }
 }

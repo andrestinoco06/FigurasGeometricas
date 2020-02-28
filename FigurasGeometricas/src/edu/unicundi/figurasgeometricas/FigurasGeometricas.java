@@ -12,15 +12,15 @@ public class FigurasGeometricas {
     /**
      * Variable "lado1" para almacenar uno de los lados de la figura geométrica.
      */
-    private float lado1;
+    private double lado1;
     /**
      * Variable "area" para almacenar el area de la figura geométrica.
      */
-    private float area;
+    private double area;
     /**
      * Variable "perimetro" para almacenar el perimetro de la figura geométrica.
      */
-    private float perimetro;
+    private double perimetro;
     /**
      * Variable "color" para almacenar el color de la figura geométrica.
      */
@@ -31,7 +31,7 @@ public class FigurasGeometricas {
      * @param lado1 
      * @param color 
      */
-    public FigurasGeometricas(float lado1, String color){
+    public FigurasGeometricas(double lado1, String color){
         this.lado1 = lado1; 
         this.color = color;
     }
@@ -40,7 +40,7 @@ public class FigurasGeometricas {
      * Método para calcular el area de la figura geometrica.
      * @return area 
      */
-    public float hallarArea(){
+    public double hallarArea(){
         area = lado1 * lado1;
         return area;
     }
@@ -49,7 +49,7 @@ public class FigurasGeometricas {
      * Método para calcular el perimetro de la figura geometrica.
      * @return perimetro
      */
-    public float hallarPerimetro(){
+    public double hallarPerimetro(){
         perimetro = lado1 * 4;
         return perimetro;
     }
@@ -61,27 +61,27 @@ public class FigurasGeometricas {
         System.out.println("Area: " + hallarArea() + " - Perimetro: " + hallarPerimetro());
     }
 
-    public float getLado1() {
+    public double getLado1() {
         return lado1;
     }
 
-    public void setLado1(float lado1) {
+    public void setLado1(double lado1) {
         this.lado1 = lado1;
     }
 
-    public float getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(float area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
-    public float getPerimetro() {
+    public double getPerimetro() {
         return perimetro;
     }
 
-    public void setPerimetro(float perimetro) {
+    public void setPerimetro(double perimetro) {
         this.perimetro = perimetro;
     }
 

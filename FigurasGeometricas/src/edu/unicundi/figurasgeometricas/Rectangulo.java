@@ -11,7 +11,7 @@ public class Rectangulo extends FigurasGeometricas {
     /**
      * Variable "lado2" para almacenar uno de los lados de la figura geométrica.
      */
-    private float lado2;
+    private double lado2;
     
     /**
      * Constructor para inicializar los atributos de la clase.
@@ -19,7 +19,7 @@ public class Rectangulo extends FigurasGeometricas {
      * @param color
      * @param lado2 
      */
-    public Rectangulo(float lado1, String color, float lado2){
+    public Rectangulo(double lado1, String color, double lado2){
         super(lado1, color);
         this.lado2 = lado2;
     }
@@ -29,7 +29,7 @@ public class Rectangulo extends FigurasGeometricas {
      * @return getArea()
      */
     @Override
-    public float hallarArea(){
+    public double hallarArea(){
         setArea(getLado1() * lado2);
         return getArea();
     }
@@ -39,7 +39,7 @@ public class Rectangulo extends FigurasGeometricas {
      * @return getPerimetro()
      */
     @Override
-    public float hallarPerimetro(){
+    public double hallarPerimetro(){
         setPerimetro((getLado1() * 2) + (lado2 * 2));
         return getPerimetro();
     }
@@ -64,11 +64,11 @@ public class Rectangulo extends FigurasGeometricas {
         return validacion;
     }
     
-    public float getLado2() {
+    public double getLado2() {
         return lado2;
     }
 
-    public void setLado2(float lado2) {
+    public void setLado2(double lado2) {
         this.lado2 = lado2;
     }
 }

@@ -11,7 +11,7 @@ public class Triangulo extends Rectangulo{
     /**
      * Variable "lado3" para almacenar uno de los lados de la figura geométrica.
      */
-    private float lado3;
+    private double lado3;
     /**
      * Variable "tipo" para almacenar el tipo de triangulo.
      */
@@ -25,7 +25,7 @@ public class Triangulo extends Rectangulo{
      * @param lado3
      * @param tipo 
      */
-    public Triangulo(float lado1, String color, float lado2, float lado3, String tipo){
+    public Triangulo(double lado1, String color, double lado2, double lado3, String tipo){
         super(lado1, color, lado2);
         this.lado3 = lado3;
         this.tipo = tipo;
@@ -36,7 +36,7 @@ public class Triangulo extends Rectangulo{
      * @return getPerimetro()
      */
     @Override
-    public float hallarPerimetro(){
+    public double hallarPerimetro(){
         setPerimetro(getLado1() + getLado2() + lado3);
         return getPerimetro();
     }
@@ -46,9 +46,9 @@ public class Triangulo extends Rectangulo{
      * @return getArea()
      */
     @Override
-    public float hallarArea(){
-        float per = (getPerimetro()/2);
-        setArea((float) Math.sqrt(per*(per-getLado1())*(per-getLado2())*(per-lado3)));
+    public double hallarArea(){
+        double per = (getPerimetro()/2);
+        setArea((double) Math.sqrt(per*(per-getLado1())*(per-getLado2())*(per-lado3)));
         return getArea();
     }
     
@@ -69,11 +69,11 @@ public class Triangulo extends Rectangulo{
         return tipo;
     }
     
-    public float getLado3() {
+    public double getLado3() {
         return lado3;
     }
 
-    public void setLado3(float lado3) {
+    public void setLado3(double lado3) {
         this.lado3 = lado3;
     }
 
