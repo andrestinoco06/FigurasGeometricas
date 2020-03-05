@@ -34,12 +34,13 @@ public class Main {
             case 2:
                 //invoca el metodo coordenadas y envia 2 indicando que son las coordenadas de un rectangulo
                 int[] arrayCoordenadasR = coordenadas(2);
+                Rectangulo r = new Rectangulo(arrayCoordenadasR);
                 //aqui invoca la clase de rectangulo
             break;
             case 3:
                 //invoca el metodo coordenadas y envia 3 indicando que son las coordenadas de un triangulo
                 int[] arrayCoordenadasT = coordenadas(3);
-                Cuadrado t = new Cuadrado(arrayCoordenadasT);
+                Triangulo t = new Triangulo(arrayCoordenadasT);
             break;
         }
 
@@ -118,8 +119,8 @@ public class Main {
             int y4 = coordenadas[7];
             double lad1 = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
             double lad2 = Math.sqrt(Math.pow(x3-x2,2)+Math.pow(y3-y2, 2));
-            double lad3 = Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3, 2));
-            Triangulo t = new Triangulo (lad1, "Blanco", lad2, lad3);
+            //double lad3 = Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3, 2));
+            Triangulo t = new Triangulo (lad1, "Blanco", lad2);
             t.hallarArea();
             t.hallarPerimetro();
             t.imprimir();

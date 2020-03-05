@@ -6,22 +6,24 @@ package edu.unicundi.figurasgeometricas;
  * @author Johan Zambrano
  * @version 1.0.0
  */
-public class Cuadrado {
+public class Cuadrado extends FigurasGeometricas{
     
     /**
      * Método para pintar el cuadrado si la validacion retorna true.
      * @param coordenadas 
      */
     public Cuadrado(int coordenadas[]) {
-        if (validacionCuadrado(coordenadas)) {
-            Pintar a = new Pintar(coordenadas);
+        super(coordenadas);
+        
+        if (validacionCuadrado(getCoordenadas())) {
+            Pintar a = new Pintar(getCoordenadas());
         }else{
             System.out.println("Las coordenadas no son correctas para un cuadrado.");
         }
     }
 
     /**
-     * Método para validar las posiciones del rectangulo.
+     * Método para validar las posiciones del cuadrado.
      * @param coordenadas
      * @return validacion
      */

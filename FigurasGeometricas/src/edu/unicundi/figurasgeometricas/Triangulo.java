@@ -17,6 +17,11 @@ public class Triangulo extends Rectangulo{
      */
     private String tipo;
     
+    public Triangulo(int[] triangulo){
+        super(triangulo);
+        Pintar a = new Pintar(getCoordenadas());
+    }
+    
     /**
      * Constructor para inicializar los atributos de la clase.
      * @param lado1
@@ -25,9 +30,9 @@ public class Triangulo extends Rectangulo{
      * @param lado3
      * @param tipo 
      */
-    public Triangulo(double lado1, String color, double lado2, double lado3){
+    public Triangulo(double lado1, String color, double lado2){
         super(lado1, color, lado2);
-        this.lado3 = lado3;
+        //this.lado3 = lado3;
     }
     
     /**

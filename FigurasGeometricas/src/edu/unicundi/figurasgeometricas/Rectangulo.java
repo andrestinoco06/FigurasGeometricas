@@ -13,14 +13,7 @@ public class Rectangulo extends FigurasGeometricas {
      */
     private double lado2;
     private int[] coordenadas = new int[8];
-    /*
-    public Rectangulo(int[] coordenadas){
-        if (validacionRectangulo(coordenadas)) {
-            Pintar a = new Pintar(coordenadas);
-        }else{
-            System.out.println("Las coordenadas no son correctas para un cuadrado.");
-        }
-    }*/
+    
     
     /**
      * Constructor para inicializar los atributos de la clase.
@@ -28,10 +21,23 @@ public class Rectangulo extends FigurasGeometricas {
      * @param color
      * @param lado2 
      */
+    public Rectangulo(int[] array){
+        super(array);
+        if(validacionRectangulo(getCoordenadas())){
+            Pintar a = new Pintar(getCoordenadas());
+        }else{
+            System.out.println("Las coordenadas no son correctas para un cuadrado.");
+        }
+    }
     public Rectangulo(double lado1, String color, double lado2){
+        
         super(lado1, color);
         this.lado2 = lado2;
-        Pintar a = new Pintar(coordenadas);
+        /*if (validacionRectangulo(coordenadas)) {
+            Pintar a = new Pintar(coordenadas);
+        }else{
+            System.out.println("Las coordenadas no son correctas para un cuadrado.");
+        }*/
     }
     
     /**

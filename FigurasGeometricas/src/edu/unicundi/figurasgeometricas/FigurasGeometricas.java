@@ -8,6 +8,7 @@ package edu.unicundi.figurasgeometricas;
  */
 public class FigurasGeometricas {
     
+    private int[] coordenadas;
     
     /**
      * Variable "lado1" para almacenar uno de los lados de la figura geométrica.
@@ -25,6 +26,13 @@ public class FigurasGeometricas {
      * Variable "color" para almacenar el color de la figura geométrica.
      */
     private String color;
+    /**
+     * Constructor para inicializar las coordenadas
+     * @param vectr = recibe el arreglo de las coordenadas
+     */
+    public FigurasGeometricas(int[] vectr){
+        this.coordenadas = vectr;
+    }
     
     /**
      * Constructor para inicializar los atributos de la clase.
@@ -49,6 +57,7 @@ public class FigurasGeometricas {
      * Método para calcular el perimetro de la figura geometrica.
      * @return perimetro
      */
+    
     public double hallarPerimetro(){
         perimetro = lado1 * 4;
         return perimetro;
@@ -92,4 +101,14 @@ public class FigurasGeometricas {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public int[] getCoordenadas() {
+        return coordenadas;
+    }
+
+    public void setCoordenadas(int[] coordenadas) {
+        this.coordenadas = coordenadas;
+    }
+    
+    
 }
