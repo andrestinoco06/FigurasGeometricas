@@ -119,8 +119,8 @@ public class Main {
             int y4 = coordenadas[7];
             double lad1 = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1, 2));
             double lad2 = Math.sqrt(Math.pow(x3-x2,2)+Math.pow(y3-y2, 2));
-            //double lad3 = Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3, 2));
-            Triangulo t = new Triangulo (lad1, "Blanco", lad2);
+            double lad3 = Math.sqrt(Math.pow(x3-x1,2)+Math.pow(y3-y1, 2));
+            Triangulo t = new Triangulo (lad1, "Blanco", lad2, lad3);
             t.hallarArea();
             t.hallarPerimetro();
             t.imprimir();
